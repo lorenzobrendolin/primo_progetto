@@ -4,63 +4,53 @@
 
 {%block content%}
     <h1>for</h1>
-    <p>......</p>
-{%endblock content%}
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Esercizi for</title>
-    <meta charset="UTF-8">
-</head>
-<body>
-    Cicla una sequenza usando <b>forloop.counter</b>
-    <br/>
-    {% for x in list2 %}
-        <i>{{ forloop.counter }} </i> : {{ x }}<br>
-    {% endfor %}
-    <br/>
-    Cicla una sequenza usando <b>forloop.counter0</b>
-    <br/>
-    {% for x in list2 %}
-        <i>{{ forloop.counter0 }}</i> : {{ x }}<br/>
-    {% endfor %}
-    <br/>
-    Stampa il primo elemento della sequenza usando <b>forloop.first</b>:
-    <br/>
-    {% for x in list2 %}
-        {% if forloop.first %}
-            <i>IL primo elemento</i> - {{ x }}
-        {% endif%}
-    {% endfor %}
-    <br/>
-    Stampa l'ultimo elemento della lista usando <b>forloop.last</b>
-    <br/>
-    {% for x in list2 %}
-        {% if forloop.last %}
-            <i>L'ultimo elemento</i> - {{ x }}
-        {% endif%}
-    {% endfor %}
-    <br/>
-    Stampa il numero degli elementi non ancora ciclati usando <b>forloop.revcounter</b>:
-    <br/>
-    {% for x in list2 %}
-        <i>Numero degli elementi da dover ancora ciclare</i> - {{ forloop.revcounter }}<br/>
-        <i>Elemento</i> - {{ x }}<br/>
-    {% endfor %}
-    <br/>
-    Stampa il numero degli elementi non ancora ciclati usando <b>forloop.revcounter0</b>
-    <br/>
-    {% for x in list2 reversed %}
-        <i>Elemento</i> - {{ x }}<br/>
-    {% endfor %}
-
-    <h2>Contenuto del dizionario:</h2>
-    <ul>
-        {% for key, value in my_dict.items %}
-            <li>{{ key }}: {{ value }}</li>
+    <p>
+        Cicla una sequenza usando <b>forloop.counter</b>
+        <br/>
+        {% for x in list2 %}
+            <i>{{ forloop.counter }} </i> : {{ x }}<br>
         {% endfor %}
-    </ul>
+        <br/>
+        Cicla una sequenza usando <b>forloop.counter0</b>
+        <br/>
+        {% for x in list2 %}
+            <i>{{ forloop.counter0 }}</i> : {{ x }}<br/>
+        {% endfor %}
+        <br/>
+        Stampa il primo elemento della sequenza usando <b>forloop.first</b>:
+        <br/>
+        {% for x in list2 %}
+            {% if forloop.first %}
+                <i>IL primo elemento</i> - {{ x }}
+            {% endif%}
+        {% endfor %}
+        <br/>
+        Stampa l'ultimo elemento della lista usando <b>forloop.last</b>
+        <br/>
+        {% for x in list2 %}
+            {% if forloop.last %}
+                <i>L'ultimo elemento</i> - {{ x }}
+            {% endif%}
+        {% endfor %}
+        <br/>
+        Stampa il numero degli elementi non ancora ciclati usando <b>forloop.revcounter</b>:
+        <br/>
+        {% for x in list2 %}
+            <i>Numero degli elementi da dover ancora ciclare</i> - {{ forloop.revcounter }}<br/>
+            <i>Elemento</i> - {{ x }}<br/>
+        {% endfor %}
+        <br/>
+        Stampa il numero degli elementi non ancora ciclati usando <b>forloop.revcounter0</b>
+        <br/>
+        {% for x in list2 reversed %}
+            <i>Elemento</i> - {{ x }}<br/>
+        {% endfor %}
     
-</body>
-</html>
+        <h2>Contenuto del dizionario:</h2>
+        <ul>
+            {% for key, value in my_dict.items %}
+                <li>{{ key }}: {{ value }}</li>
+            {% endfor %}
+        </ul>
+    </p>
+{%endblock content%}

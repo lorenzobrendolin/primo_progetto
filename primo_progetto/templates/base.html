@@ -24,12 +24,12 @@
                 Prima app
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Chi siamo</a>
-                <a class="dropdown-item" href="#">Homepage</a>
-                <a class="dropdown-item" href="#">Index</a>
-                <a class="dropdown-item" href="#">Lista</a>
-                <a class="dropdown-item" href="#">Variabili</a>
-                <a class="dropdown-item" href="#">Welcome</a>
+                <a class="dropdown-item" href="{% url 'prima_app:chi_siamo'%}">Chi siamo</a>
+                <a class="dropdown-item" href="{% url 'prima_app:homepage'%}">Homepage</a>
+                <a class="dropdown-item" href="{% url 'prima_app:index'%}">Index</a>
+                <a class="dropdown-item" href="{% url 'prima_app:lista'%}">Lista</a>
+                <a class="dropdown-item" href="{% url 'prima_app:variabili'%}">Variabili</a>
+                <a class="dropdown-item" href="{% url 'prima_app:welcome'%}">Welcome</a>
               </div>
             </li>
             <li class="nav-item dropdown">
@@ -37,9 +37,9 @@
                   Seconda app
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">for</a>
-                  <a class="dropdown-item" href="#">if</a>
-                  <a class="dropdown-item" href="#">if else elif</a>
+                  <a class="dropdown-item" href="{% url 'seconda_app:es_for'%}">for</a>
+                  <a class="dropdown-item" href="{% url 'seconda_app:es_if'%}">if</a>
+                  <a class="dropdown-item" href="{% url 'seconda_app:if_else_elif'%}">if else elif</a>
                 </div>
               </li>
           </ul>
