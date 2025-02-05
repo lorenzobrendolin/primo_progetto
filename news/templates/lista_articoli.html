@@ -3,13 +3,26 @@
     Lista Articoli
 {% endblock title%}
 {%block content%}
-<h4>Articoli del giornalista:</h4>
-    {% for articolo in articoli %}
-        {% if articolo.giornalista == giornalista.id %}
+ 
+{% if giornalista%}
+<h4>Articoli del giornalista: {{giornalista}}</h4>
+{%else%}
+<h4>Tutti gli Articoli </h4>
+{%endif%}
+
+{% for articolo in articoli %}
+    {% if giornalista%}
+            
             <p><strong>Titolo: </strong>{{ articolo.titolo }}</p>
             <p><strong>Contenuto: </strong>{{ articolo.contenuto }}</p>
             <p><strong>Autore: </strong>{{ articolo.giornalista }}</p>
             <hr>
-        {% endif %}
-    {% endfor %}
+        
+    {%else%}
+        <p><strong>Titolo: </strong><a href="{% url 'news:articolo_detail' articolo.id%}">{{ articolo.titolo }}</a></p>
+        <p><strong>Contenuto: </strong>{{ articolo.contenuto }}</p>
+        <p><strong>Autore: </strong>{{ articolo.giornalista }}</p>
+        <hr>
+    {%endif%}
+{% endfor %}
 {% endblock content%}

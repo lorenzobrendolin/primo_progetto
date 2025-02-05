@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% block title %}QueryBase{% endblock title %}
+{% block content %}
+    {% for articolo in articoli_cognome %}
+    <h1>{{articolo.titolo}}</h1>
+    <h3>{{articolo.contenuto}}</h3>
+    <h5>Autore: {{articolo.giornalista}}</h5>
+    {% endfor %}
+    <hr>
+
+    <h5>Numero articoli: {{numero_totale_articoli}}
+    </h5>
+    <hr>
+
+    <h5>Numero articoli: {{numero_articoli_giornalista_2}}
+    </h5>
+    <hr>
+
+    <h5>articoli senza visualizzazioni</h5>
+    {% for articolo in articoli_senza_visualizzazioni %}
+    <h1>{{articolo.titolo}}</h1>
+    <h3>{{articolo.contenuto}}</h3>
+    <h5>Autore: {{articolo.giornalista}}</h5>
+    {% endfor %}
+    <hr>
+
+    <h5>articolo più visualizzato: {{articolo_piu_visualizzato}}</h5>
+    <hr>
+
+    {% for giornalista in giornalisti_nati %}
+    <h1>{{giornalista.nome}}</h1>
+    <h3>{{giornalista.cognome}}</h3>
+    {% endfor %}
+    <hr>
+
+    {% for articolo in articoli_del_giorno %}
+    <h1>{{articolo.titolo}}</h1>
+    <h3>{{articolo.contenuto}}</h3>
+    <h5>Autore: {{articolo.giornalista}}</h5>
+    {% endfor %}
+    <hr>
+
+    {% for articolo in articoli_periodo %}
+    <h1>{{articolo.titolo}}</h1>
+    <h3>{{articolo.contenuto}}</h3>
+    <h5>Autore: {{articolo.giornalista}}</h5>
+    {% endfor %}
+    <hr>
+
+    {% for articolo in articoli_giornalisti %}
+    <h1>{{articolo.titolo}}</h1>
+    <h3>{{articolo.contenuto}}</h3>
+    <h5>Autore: {{articolo.giornalista}}</h5>
+    {% endfor %}
+    <hr>
+
+    <h5>Giornalista giovane: </h5>
+    <h5>{{giornalista_giovane.nome}}</h5>
+    <h5>{{giornalista_giovane.cognome}}</h5>
+    <hr>
+
+    <h5>Giornalista anziano: </h5>
+    <h5>{{giornalista_anziano.nome}}</h5>
+    <h5>{{giornalista_anziano.cognome}}</h5>
+    <hr>
+
+    {% for articolo in ultimi %}
+    <h1>{{articolo.titolo}}</h1>
+    <h3>{{articolo.contenuto}}</h3>
+    <h5>Autore: {{articolo.giornalista}}</h5>
+    {% endfor %}
+    <hr>
+
+    {% for articolo in articoli_minime_visualizzazioni %}
+    <h1>{{articolo.titolo}}</h1>
+    <h3>{{articolo.contenuto}}</h3>
+    <h5>Autore: {{articolo.giornalista}}</h5>
+    {% endfor %}
+    <hr>
+
+    {% for articolo in articoli_parola %}
+    <h1>{{articolo.titolo}}</h1>
+    <h3>{{articolo.contenuto}}</h3>
+    <h5>Autore: {{articolo.giornalista}}</h5>
+    {% endfor %}
+    <hr>
+
+    {% for articolo in articoli_mese_anno %}
+    <h1>{{articolo.titolo}}</h1>
+    <h3>{{articolo.contenuto}}</h3>
+    <h5>Autore: {{articolo.giornalista}}</h5>
+    {% endfor %}
+    <hr>
+
+    {% for giornalista in giornalisti_con_articoli_popolari %}
+    <h1>{{giornalista.nome}}</h1>
+    <h3>{{giornalista.cognome}}</h3>
+    {% endfor %}
+    <hr>
+
+    {% for articolo in articoli_con_and %}
+    <h1>{{articolo.titolo}}</h1>
+    <h3>{{articolo.contenuto}}</h3>
+    <h5>Autore: {{articolo.giornalista}}</h5>
+    {% endfor %}
+    <hr>
+
+    {% for articolo in articoli_con_or %}
+    <h1>{{articolo.titolo}}</h1>
+    <h3>{{articolo.contenuto}}</h3>
+    <h5>Autore: {{articolo.giornalista}}</h5>
+    {% endfor %}
+    <hr>
+
+    {% for articolo in articoli_con_not %}
+    <h1>{{articolo.titolo}}</h1>
+    <h3>{{articolo.contenuto}}</h3>
+    <h5>Autore: {{articolo.giornalista}}</h5>
+    {% endfor %}
+    <hr>
+
+{% endblock content %}
