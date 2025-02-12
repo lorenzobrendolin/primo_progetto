@@ -17,3 +17,42 @@
         <hr>
     {% endfor %}
 {%endblock content%}
+
+py manage.py makemigration
+py manage.py startapp
+
+
+pagelle={"giuseppe gullo": [("matematica",9,0),   ("italiano",7,3),("inglese",7.5,4), ("storia",7.5,4),("geografia",5,7)],
+"antonio barbera":[("matematica",8,1),   ("italiano",6,1),("inglese",9.5,0),    ("storia",8,2),("geografia",8,1)],
+"nicola spina":    [("matematica",7.5,2),("italiano",6,2),("inglese",4,3),    ("storia",8.5,2),("geografia",8,2)]
+}
+
+totale_voti = 0
+numero_voti = 0
+
+for studente in pagelle:
+    for materia in pagelle[studente]:
+        voto = materia[1]
+        totale_voti += voto
+        numero_voti += 1
+
+media = totale_voti / numero_voti
+
+print(media)
+
+pagelle={"giuseppe gullo": [("matematica",9,0),   ("italiano",7,3),("inglese",7.5,4), ("storia",7.5,4),("geografia",5,7)],
+"antonio barbera":[("matematica",8,1),   ("italiano",6,1),("inglese",9.5,0),   ("storia",8,2),("geografia",8,1)],
+"nicola spina":   [("matematica",7.5,2),("italiano",6,2),("inglese",4,3),   ("storia",8.5,2),("geografia",8,2)]
+}
+
+voti_nicola = pagelle["nicola spina"]
+somma_voti = 0
+numero_voti = 0
+
+for materia, voto, assenze in voti_nicola:
+    somma_voti += voto
+    numero_voti += 1
+
+media = somma_voti / numero_voti
+
+print(media)

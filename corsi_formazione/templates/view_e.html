@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+
+{%block title %}
+    view e
+{%endblock title %}
+
+{%block content %}
+    <h1>Lista dei Corsi</h1>
+    {%if corsi_prima%}
+    <p>{{corso.titolo}}</p>
+{%endblock content%}

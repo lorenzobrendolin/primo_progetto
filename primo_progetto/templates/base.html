@@ -47,8 +47,21 @@
                   News
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="{% url 'news:homepage'%}">Home</a>
+                  <a class="dropdown-item" href="{% url 'news:lista_articoli'%}">Lista</a>
                   <a class="dropdown-item" href="{% url 'news:query_base'%}">Query</a>
-
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Corsi di Formazione
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="{% url 'corsi_formazione:view_a'%}">A</a>
+                  <a class="dropdown-item" href="{% url 'corsi_formazione:view_b'%}">B</a>
+                  <a class="dropdown-item" href="{% url 'corsi_formazione:view_c'%}">C</a>
+                  <a class="dropdown-item" href="{% url 'corsi_formazione:view_d'%}">D</a>
+                  <a class="dropdown-item" href="{% url 'corsi_formazione:view_e'%}">E</a>
                 </div>
               </li>
           </ul>
