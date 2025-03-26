@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'seconda_app',
     'news',
     'corsi_formazione',
+    'forms_app',
+    'crispy_forms',
+    'crispy_bootstrap4',
 
 ]
 
@@ -64,6 +67,7 @@ TEMPLATES = [
                  os.path.join(BASE_DIR, 'seconda_app/templates'),
                  os.path.join(BASE_DIR, 'news/templates'),
                  os.path.join(BASE_DIR, 'corsi_formazione/templates'),
+                 os.path.join(BASE_DIR, 'forms_app/templates'),
                  ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -78,6 +82,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'primo_progetto.wsgi.application'
+
 
 
 # Database
@@ -131,3 +136,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
