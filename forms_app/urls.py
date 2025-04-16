@@ -1,9 +1,11 @@
 from django.urls import path
-from .views import contatti
+from .views import contatti, elimina_contatto, listacontatti, modifica_contatto
 
 app_name = 'forms_app'
 
 urlpatterns = [
-    path('contattaci/', contatti, name="contatti"),
-
+    path('contatti/', contatti, name='contatti'),
+    path('lista/', listacontatti, name='listacontatti'),
+    path('elimina/<int:id>/', elimina_contatto, name='elimina_contatto'),
+    path('modifica/<int:id>/', modifica_contatto, name='modifica_contatto'),
 ]
