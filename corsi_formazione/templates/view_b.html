@@ -8,4 +8,5 @@
     <h1>Lista dei Corsi</h1>
     {%if dettagli_corsi%}
     <p><strong>Titolo: </strong><a href="{% url corso.id%}">{{corso.titolo}}</a></p>
+    {% endif %}
 {%endblock content%}

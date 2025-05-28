@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'forms_app',
     'crispy_forms',
     'crispy_bootstrap4',
+    'api'
 
 ]
 
@@ -68,6 +69,7 @@ TEMPLATES = [
                  os.path.join(BASE_DIR, 'news/templates'),
                  os.path.join(BASE_DIR, 'corsi_formazione/templates'),
                  os.path.join(BASE_DIR, 'forms_app/templates'),
+                 os.path.join(BASE_DIR, 'api/templates'),
                  ],
         'APP_DIRS': True,
         'OPTIONS': {
