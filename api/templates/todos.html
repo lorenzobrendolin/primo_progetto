@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista TODO</title>
+</head>
+<body>
+    <h1>Lista delle attività (TODO)</h1>
+    
+    {% if errore %}
+        <p style="color: red;">{{ errore }}</p>
+    {% endif %}
+    
+    {% if todos %}
+        <ul>
+            {% for elemento in todos %}
+                <li>
+                    <strong>ID :</strong> {{ elemento.id }} <br>
+                    <strong>Titolo :</strong> {{ elemento.title }} <br>
+                    <strong>Completato :</strong> {{ elemento.completed }} <br><br>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Nessun dato disponibile .</p>
+    {% endif %}
+</body>
+</html>
+
